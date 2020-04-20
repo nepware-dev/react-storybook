@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "cwd": "babelrc",
+        "root": ["./src"],
+        "alias": {
+          "@ra": "./src/vendor/react-arsenal"
+        }
+      }
+    ]
+  ]
+}
