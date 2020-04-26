@@ -4,6 +4,7 @@ import  _Button from '../vendor/react-arsenal/components/Button';
 import  _Modal from '../vendor/react-arsenal/components/Modal';
 import _WindowPortal from '../vendor/react-arsenal/components/WindowPortal';
 import _Dropdown from '../vendor/react-arsenal/components/Dropdown';
+import _Pagination from '../vendor/react-arsenal/components/Pagination';
 
 import styles from './styles.module.scss';
 
@@ -46,3 +47,13 @@ export const Dropdown = () => (
     </p>
   </_Dropdown>
 );
+
+export const Pagination = () => (
+  <_Pagination
+    className={styles.pagination}
+    totalRecords={200}
+    pageLimit={15}
+    pageNeighbours={2}
+    onChange={action('changed')}
+  />
+)
