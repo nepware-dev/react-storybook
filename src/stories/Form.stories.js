@@ -1,8 +1,17 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
+
 import SelectInput from '../vendor/react-arsenal/components/Form/SelectInput';
 import TextInput from '../vendor/react-arsenal/components/Form/TextInput';
-import Input from '../vendor/react-arsenal/components/Form/Input';
+import SecureTextInput from '../vendor/react-arsenal/components/Form/SecureTextInput';
+import DateInput from '../vendor/react-arsenal/components/Form/DateInput';
+import TimeInput from '../vendor/react-arsenal/components/Form/TimeInput';
+import DateTimeInput from '../vendor/react-arsenal/components/Form/DateTimeInput';
+import FileInput from '../vendor/react-arsenal/components/Form/FileInput';
+import NumberInput from '../vendor/react-arsenal/components/Form/NumberInput';
+import ColorInput from '../vendor/react-arsenal/components/Form/ColorInput';
+import CheckboxInput from '../vendor/react-arsenal/components/Form/CheckboxInput';
+import RadioInput from '../vendor/react-arsenal/components/Form/RadioInput';
 
 import '../vendor/react-arsenal/styles/_base.scss';
 
@@ -31,33 +40,39 @@ export const Text = () => (
   />
 );
 
-export const Password = () => (
-  <Input type="password"
+export const SecureText = () => (
+  <SecureTextInput
     onChange={action('changed')}
   />
 );
 
 export const Number = () => (
-  <Input type="number"
+  <NumberInput
     onChange={action('changed')}
   />
 );
 
 export const Date = () => (
-  <Input type="date"
+  <DateInput
     onChange={action('changed')}
   />
 );
 
 export const Time = () => (
-  <Input type="time"
+  <TimeInput
+    onChange={action('changed')}
+  />
+);
+
+export const DateTime = () => (
+  <DateTimeInput
     onChange={action('changed')}
   />
 );
 
 export const Checkbox = () => (
   <>
-    <Input type="checkbox"
+    <CheckboxInput
       onChange={action('changed')}
     />
   </>
@@ -65,7 +80,7 @@ export const Checkbox = () => (
 
 export const Radio = () => (
   <>
-    <Input type="radio"
+    <RadioInput
       onChange={action('changed')}
     />
   </>
@@ -73,7 +88,7 @@ export const Radio = () => (
 
 export const Color = () => (
   <>
-    <Input type="color"
+    <ColorInput
       onChange={action('changed')}
     />
   </>
@@ -81,7 +96,7 @@ export const Color = () => (
 
 export const File = () => (
   <>
-    <Input type="file"
+    <FileInput
       name="file"
       onChange={action('changed')}
     />
