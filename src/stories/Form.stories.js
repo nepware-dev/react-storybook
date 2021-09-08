@@ -8,6 +8,7 @@ import DateInput from '../vendor/react-arsenal/components/Form/DateInput';
 import TimeInput from '../vendor/react-arsenal/components/Form/TimeInput';
 import DateTimeInput from '../vendor/react-arsenal/components/Form/DateTimeInput';
 import FileInput from '../vendor/react-arsenal/components/Form/FileInput';
+import DragDropFileInput from '../vendor/react-arsenal/components/Form/DragDropFileInput';
 import NumberInput from '../vendor/react-arsenal/components/Form/NumberInput';
 import ColorInput from '../vendor/react-arsenal/components/Form/ColorInput';
 import CheckboxInput from '../vendor/react-arsenal/components/Form/CheckboxInput';
@@ -101,4 +102,14 @@ export const File = () => (
       onChange={action('changed')}
     />
   </>
+);
+
+export const DragDropFile = () => (
+    <DragDropFileInput 
+        multiple
+        maxFiles={2}
+        name="drag-and-drop-input" 
+        accept="application/pdf"
+        onChange={action('changed')} 
+    />
 );
