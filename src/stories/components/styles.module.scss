@@ -20,3 +20,17 @@
 .popup {
     background: red;
 }
+
+.tabItem {
+    padding: 0.25em 1em;
+    font-weight: 500;
+}
+
+.activeTabItem {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+}
+
+.contentSection {
+    padding: 1em;
+}
