@@ -15,7 +15,7 @@ export const Story  =  (args) => {
   const ref = useRef();
 
   const handleClick = useCallback(()  => {
-    setShowPopup(!showPopup)
+    setShowPopup(!showPopup);
   });
 
   return (
@@ -38,4 +38,8 @@ Story.args  = {
   closeOnOutsideClick: true,
   anchorOrigin: 'center left',
   transformOrigin: 'center left',
+};
+
+Story.argTypes = {
+    isVisible: { control: false },
 };
