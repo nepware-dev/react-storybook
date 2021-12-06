@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@storybook/addon-options": "^5.3.21",
+    "@storybook/addon-options": "^6.0.0-alpha.29",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -11,11 +11,13 @@
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-focus-lock": "^2.6.0",
     "react-icons": "^4.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "storybook-addon-react-docgen": "^1.2.42"
   },
   "scripts": {
-    "start": "start-storybook -p 9009 -s public",
+    "start": "start-storybook -p 9009",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build": "build-storybook -s public"
@@ -36,11 +38,15 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.3.8",
-    "@storybook/addon-links": "^6.3.8",
-    "@storybook/addons": "^6.3.8",
+    "@storybook/addon-a11y": "^6.5.0-alpha.1",
+    "@storybook/addon-actions": "^6.5.0-alpha.1",
+    "@storybook/addon-docs": "^6.5.0-alpha.1",
+    "@storybook/addon-essentials": "^6.5.0-alpha.1",
+    "@storybook/addon-links": "^6.5.0-alpha.1",
+    "@storybook/addon-storysource": "^6.5.0-alpha.1",
+    "@storybook/addons": "^6.5.0-alpha.1",
     "@storybook/preset-create-react-app": "^3.2.0",
-    "@storybook/react": "^6.3.8",
+    "@storybook/react": "^6.5.0-alpha.1",
     "babel-plugin-module-resolver": "^4.1.0"
   }
 }

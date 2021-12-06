@@ -1,14 +1,24 @@
 {
+  "presets": [
+    [
+      "@babel/preset-env",
+    {
+      "loose": true,
+      "shippedProposals": true
+    }
+    ],
+    "@babel/preset-react"
+  ],
   "plugins": [
     [
       "module-resolver",
-      {
-        "cwd": "babelrc",
-        "root": ["./src"],
-        "alias": {
-          "@ra": "./src/vendor/react-arsenal"
-        }
+    {
+      "cwd": "babelrc",
+      "root": ["./src"],
+      "alias": {
+        "@ra": "./src/vendor/react-arsenal"
       }
+    }
     ]
   ]
 }
