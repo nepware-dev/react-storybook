@@ -2,7 +2,7 @@ import React from 'react';
 
 import Dropdown from '@ra/components/Dropdown';
 
-const Story = () => (
+export const Story = () => (
   <Dropdown label="Dropdown label">
     <p>
       Open Window Portal
@@ -10,4 +10,9 @@ const Story = () => (
   </Dropdown>
 );
 
-export default Story;
+Story.storyName = 'Dropdown';
+
+export default {
+  title: 'Components/Dropdown',
+  component: Dropdown,
+};
