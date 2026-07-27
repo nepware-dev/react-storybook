@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@ra/components/Button';
 
 export const Story = () => (
-  <Button primary>Open Modal</Button>
+  <Button>Open Modal</Button>
 );
 
 Story.storyName = 'Modal';

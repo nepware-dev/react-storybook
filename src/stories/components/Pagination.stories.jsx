@@ -1,15 +1,15 @@
 import React from 'react';
-import {action} from '@storybook/addon-actions';
+import {action} from 'storybook/actions';
 
 import Pagination from '@ra/components/Pagination';
 
 import styles from './styles.module.scss';
 
-export const Story = (args) => (
+export const Story = (storyArgs) => (
   <Pagination
     className={styles.pagination}
     onChange={action('changed')}
-    {...args}
+    {...storyArgs}
   />
 );
 

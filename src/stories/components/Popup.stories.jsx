@@ -10,7 +10,7 @@ export default {
   component: Popup,
 };
 
-export const Story  =  (args) => {
+export const Story  =  (storyArgs) => {
   const [showPopup, setShowPopup] = useState(false);
   const ref = useRef();
 
@@ -23,7 +23,7 @@ export const Story  =  (args) => {
       <Button ref={ref} onClick={handleClick}>
         checking
       </Button>
-      <Popup className={styles.popup} isVisible={showPopup} anchor={ref} onClose={handleClick} {...args}>
+      <Popup className={styles.popup} isVisible={showPopup} anchor={ref} onClose={handleClick} {...storyArgs}>
         <div>
           test
         </div>

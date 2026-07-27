@@ -1,13 +1,13 @@
 import React from 'react';
-import {action} from '@storybook/addon-actions';
+import {action} from 'storybook/actions';
 
 import ToggleSwitch from '@ra/components/Form/ToggleSwitch';
 
-export const Story = args => {
+export const Story = storyArgs => {
     return (
         <ToggleSwitch
             onChange={action('changed')}
-            {...args}
+            {...storyArgs}
         />
     );
 };
