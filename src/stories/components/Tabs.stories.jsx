@@ -1,18 +1,18 @@
 import React from 'react';
-import {action} from '@storybook/addon-actions';
+import {action} from 'storybook/actions';
 
 import Button from '@ra/components/Button';
 import Tabs, {Tab} from '@ra/components/Tabs';
 
 import styles from './styles.module.scss';
 
-export const Story = (args) => (
+export const Story = (storyArgs) => (
   <Tabs
     defaultActiveTab='profile'
     onChange={action('Tab Changed!')}
     tabItemClassName={styles.tabItem}
     activeTabItemClassName={styles.activeTabItem}
-    {...args}
+    {...storyArgs}
   >
     <Tab
       label="home"
@@ -37,7 +37,7 @@ export const Story = (args) => (
     >
       <div>
         <p>Praesent ac turpis elit. Aliquam condimentum aliquet egestas. Nulla vehicula in risus non varius.</p>
-        <Button primary>Contact Button</Button>
+        <Button>Contact Button</Button>
       </div>
     </Tab>
   </Tabs>

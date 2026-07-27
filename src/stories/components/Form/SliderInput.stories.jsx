@@ -1,11 +1,11 @@
 import React from 'react';
-import {action} from '@storybook/addon-actions';
+import {action} from 'storybook/actions';
 
 import SliderInput from '@ra/components/Form/SliderInput';
 
-export const Story = args => {
+export const Story = storyArgs => {
     return (
-        <SliderInput onChange={action('changed')} containerStyle={{width: '50%', height: 250}} {...args} />
+        <SliderInput onChange={action('changed')} containerStyle={{width: '50%', height: 250}} {...storyArgs} />
     );
 };
 

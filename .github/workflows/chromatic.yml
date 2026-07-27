@@ -17,16 +17,24 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
+        with:
+          # Chromatic needs full history to find the baseline build
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
       - name: Get React Arsenal
-        run: git clone https://gitlab.com/nepware-internals/react-arsenal.git src/vendor/react-arsenal
+        run: git clone --depth 1 https://github.com/nepware-dev/react-arsenal.git src/vendor/react-arsenal
       - name: Install dependencies
         run: yarn
         # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic
-        uses: chromaui/action@v1
+        uses: chromaui/action@v18
         # Chromatic GitHub Action options
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          # This repo builds Storybook through "build", not the default "build-storybook"
+          buildScriptName: build
