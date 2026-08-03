@@ -15,6 +15,10 @@ so components silently receive `undefined` props (`SliderInput` throws outright)
 
 ## Sharp edges
 
+- `.storybook/preview.js` must import `@ra/styles/_base.scss`. It carries the `:root`
+  variables (`--color-primary`, ...), the reset and the font stack, so without it stories
+  render unstyled: serif text, no borders, transparent panels. Keep it global - when only
+  individual stories imported it, stories opened directly loaded without it.
 - `react-arsenal` ships its own `node_modules`, so `.storybook/main.mjs` dedupes
   `react`/`react-dom` onto this project's copy. Removing that dedupe loads two Reacts.
 - CI clones `react-arsenal` without installing its dependencies, so this project's

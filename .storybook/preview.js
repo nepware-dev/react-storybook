@@ -1,3 +1,5 @@
+import '@ra/styles/_base.scss';
+
 export const parameters = {
   controls: { expanded: true },
 };

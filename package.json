@@ -23,12 +23,12 @@
     "chromatic": "npx chromatic"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "10.5.4",
-    "@storybook/addon-docs": "10.5.4",
-    "@storybook/addon-links": "10.5.4",
-    "@storybook/react-vite": "10.5.4",
+    "@storybook/addon-a11y": "10.5.5",
+    "@storybook/addon-docs": "10.5.5",
+    "@storybook/addon-links": "10.5.5",
+    "@storybook/react-vite": "10.5.5",
     "chromatic": "^18.1.0",
-    "storybook": "10.5.4",
+    "storybook": "10.5.5",
     "typescript": "^5",
     "vite": "^8"
   }

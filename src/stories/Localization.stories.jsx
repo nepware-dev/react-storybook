@@ -7,7 +7,6 @@ import DateTimeInput from '../vendor/react-arsenal/components/Form/DateTimeInput
 
 import TimeUtils from '../vendor/react-arsenal/utils/time';
 
-import '../vendor/react-arsenal/styles/_base.scss';
 import styles from './styles.module.scss';
 
 export default {
